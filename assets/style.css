@@ -1,0 +1,95 @@
+.parallax {
+    background-image: url("./images/abstract-background-canvas-249798.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: filling 15s linear forwards infinite;
+    padding: 1%
+}
+
+@keyframes filling {
+    from{
+        background-position: center 25%;
+    }
+    to {
+        background-position: center 50%;
+    }
+}
+
+nav {
+    background-color: rgba(248, 248, 248, 0) !important;
+    box-shadow: none;
+    padding-left: 5%;
+    width: 15% !important;
+}
+
+.navbar-fixed {
+    height: 5%;
+}
+
+.menu-icon {
+    font-size: 4rem !important;
+    color: black;
+}
+
+.dropdown-content {
+    width: 1% !important;
+}
+
+.container-text {
+    -webkit-text-fill-color: cover;
+    -webkit-background-clip: text;
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.title-header {
+    color: black;
+    font-family: 'Lato', sans-serif;
+    background-color: #4ce6f1;
+    padding: 1px 0 1px 0;
+    font-size: 2 rem;
+    align-content: center !important;
+}
+
+.activator {
+    cursor: pointer;
+}
+
+@media all and (max-width:1024px) {
+    .parallax {
+        animation: none;
+        overflow: hidden;
+    }
+}
+
+.fixed-action-btn {
+    margin-right: 2%;
+}
+
+.project-vid {
+    height: 30rem;
+    width: 1090;
+}
+
+.project-img {
+    height: 300px;
+    width: 120px;
+}
+
+.headshot2 {
+    max-width: 300px;
+    max-height: 300px;
+    width: 100%
+}
+
+.about-body, .about-contact {
+    font-size: 20px;
+}

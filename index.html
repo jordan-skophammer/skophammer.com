@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="./assets/script.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <link type="text/css" rel="stylesheet" href="./assets/materialize-social.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico"/>
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Jordan Skophammer</title>
+</head>
+<body> 
+    <div class="parallax">
+        <div class="row">
+            <div class="col m3"></div>
+            <div class="col m6">
+                <div class="container-text">
+                    <div class="title-header">
+                        <h3><strong>JORDAN SKOPHAMMER</strong></h3>
+                        <h4><i>WEB DEVELOPER</i></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about" class="row" style="margin-bottom: 0px;"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col m12">
+                <div class="container-text"> 
+                    <div class="fixed-action-btn">
+                        <a class="waves-effect waves-light btn-floating btn-large social github" href="https://github.com/jordan-skophammer" target="_blank">
+                            <i class="fa fa-github"></i>Sign in with github
+                        </a>
+                        <a class="waves-effect waves-light btn-floating btn-large social linkedin" href="https://www.linkedin.com/in/jordan-skophammer" target="_blank">
+                            <i class="fa fa-linkedin"></i> Sign in with linkedin
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+        <nav class="nav1">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo"></a>
+                <a href="#" class="dropdown-trigger" data-target="dropdown1"><i class="material-icons menu-icon">menu</i></a>
+                <ul id="dropdown1" class="dropdown-content">
+                    <li><a id="projectslink" href="#"><strong>Projects</strong></a></li>
+                    <li><a id="aboutlink" href="#"><strong>About</strong></a></li>
+                    <li><a id="contactlink" href="#"><strong>Contact</strong></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Title -->
+    <div class="container">
+
+    <!-- About -->
+        <div class="row">
+            <div class="row">
+                <div class="col m12">
+                    <h4><u>About</u></h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m4">
+                    <img class="headshot2" src="./assets/images/forest-headshot.jpg" alt="headshot-forest">
+                </div>
+                <div class="col m8 about-body">
+                    I’m Jordan Skophammer, I’m a natural problem solver and passionate about web development. I enjoy using my creative and technical skills to engineer productive, intuitive, and innovative applications.
+                <br><br>
+                    I enjoy web development because I constantly learning new skills and collaborating with new people.  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h4><u>Contact</u></h4>
+                    <div class="about-contact"><a href="mailto: jordan.skophammer@gmail.com">jordan.skophammer@gmail.com</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects -->
+    <div class="parallax"></div>
+    <div class="container">
+        <div id="projects"></div><br>
+        <h4><u>Latest Projects</u></h4>
+        <div class="row">
+            <div class="col m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="project-img" src="./assets/images/BalanceAppScreenshot.JPG" alt="BalanceAppScreenshot">
+                    </div>
+                    <div class="card-content">
+                        <i class="material-icons activator right">description</i>
+                        <a href="http://whispering-shelf-92626.herokuapp.com/" target="_blank"><h5>Balance App</h5></a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title"><strong>Balance App</strong><i class="material-icons right">close</i></span>
+                        <p>A financial budgeting app made in React. The app dynamically represents amount via a chart. Users are able to add, delete, or modify descriptions and amounts.</p>
+                        <p>
+                            <h6><strong>Future Features:</strong></h6>
+                            <ul>
+                                <li>Add database to hold user data</li>
+                                <li>Add account login and authentication</li>
+                            </ul>
+                        </p>
+                        <p><strong>Technologies used:</strong> React, Chart.js, React-Materialize</p>
+                        <p><a href="https://github.com/jordan-skophammer/balance-app" target="_blank">Github Repo</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="project-img" src="./assets/images/NamakanScreenshot.JPG" alt="Namakan-Screenshot">
+                    </div>
+                    <div class="card-content">
+                        <i class="material-icons activator right">description</i>
+                        <a href="https://namakanfur.com" target="_blank"><h5>Namakan Fur</h5></a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title"><strong>Namakan Fur</strong><i class="material-icons right">close</i></span>
+                        <p>A small business retail website using Shopify. The goal of using Shopify is for the client to be able to add content easily without any coding knowledge.</p>
+                        <p><strong>Technologies used: </strong> Shopify, HTML and Liquid</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="project-img" src="./assets/images/DinetteScreenshot.JPG" alt="Dinette-Screenshot">
+                    </div>
+                    <div class="card-content">
+                        <i class="material-icons activator right">description</i>
+                        <a href="https://lit-oasis-87145.herokuapp.com" target="_blank"><h5>Dinette</h5></a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title"><strong>Dinette</strong><i class="material-icons right">close</i></span>
+                        <p>A restaurant search and ballot application. Search for restaurants based on city, zip code, or landmark. From the search results, learn more details about desired restaurants, then add restaurants to your ballot. Friends and family can search for your ballot based on your username and vote. Once voting results are in, the ballot creator can close the ballot. The result will determined by using ranked choice voting.</p>
+                        <p><strong>Technologies used: </strong> React.js, Firebase, MongoDB, Google Places API, and Bootstrap</p>
+                        <p><a href="https://github.com/jordan-skophammer/dinette-app" target="_blank">Github Repo</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="project-img" src="./assets/images/PicknicScreenshot.JPG" alt="Picknic-Screenshot">
+                    </div>
+                    <div class="card-content">
+                        <i class="material-icons activator right">description</i>
+                        <a href="https://frozen-atoll-29378.herokuapp.com/" target="_blank"><h5>Picknic</h5></a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title"><strong>Picknic</strong><i class="material-icons right">close</i></span>
+                        <p>A recipe sharing application. Users are able to search by categories, keywords, and chef. Also users can add recipes to the Picknic database and create a favorites list.</p>
+                        <p><strong>Technologies used: </strong>Node.js, Vue.js, MySQL, and BootStrap</p>
+                        <p><a href="https://github.com/lwerner27/Recipe-Catalog">Github Repo</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="project-img" src="./assets/images/WutangScreenshot.JPG" alt="Namakan-Screenshot">
+                    </div>
+                    <div class="card-content">
+                        <i class="material-icons activator right">description</i>
+                        <a href="https://jordan-skophammer.github.io/react-game/" target="_blank"><h5>Wu-Tang Match Game</h5></a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title"><strong>Wu-Tang Match Game</strong><i class="material-icons right">close</i></span>
+                        <p>A matching game utilizing React. Every time a card is clicked the state is changed, then props are passed to the card and scoreboard components.</p>
+                        <p><strong>Technologies used: </strong> React.js and materialize</p>
+                        <p><a href="https://github.com/jordan-skophammer/react-game" target="_blank">Github Repo</a></p>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+<!-- Contact -->
+    <div class="parallax"></div>
+    <div class="container">
+        <div id="contact" class="row"></div>
+        <div class="row">
+            <div class="col m12">
+                <h4><u>Contact</u></h4>
+                <form id="contact-form" method="POST">
+                    <div class="row">
+                        <div class="form-group input-field col s12">
+                        <input id="name" name="name" type="text" class="validate" required="required">
+                        <label for="name">Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group input-field col s12">
+                        <input id="email" name="email" type="email" class="validate" required="required">
+                        <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group input-field col s12">
+                            <textarea id="message" name="message" class="materialize-textarea validate" required="required"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="g-recaptcha" data-sitekey="6LeVvKUUAAAAACas44PQpVGrS1InO-TXiYmSF5qH" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                        <input class="form-control d-none callback-response" data-recaptcha="true" required data-error="Please complete the Captcha" style="display:none;">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div id="success_message" style="width:100%; height:100%; display:none;">
+                        <h4>Success! Your Message was Sent.</h4>
+                    </div>
+                    <button id="submit" class="btn waves-effect waves-light" disabled="disabled" name="submit" type="submit">Send</button>
+                </form><br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
