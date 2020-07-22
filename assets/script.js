@@ -30,7 +30,7 @@ $(document).ready(function(){
         event.preventDefault()
 
         $.ajax({
-            url:'https://hooks.zapier.com/hooks/catch/3782172/qc0vup/',
+            url:zapierURL,
             type:'post',
             data:$('#contact-form').serialize(),
             success:() => {
