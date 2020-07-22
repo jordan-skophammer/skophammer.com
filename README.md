@@ -1,1 +1,1 @@
-# [skophammer.com](skophammer.com)
+# skophammer.com
