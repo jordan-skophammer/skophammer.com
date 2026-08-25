@@ -1,1 +1,0 @@
-# skophammer.com
