@@ -33,15 +33,17 @@ dependencies, ready to publish on GitHub Pages as-is.
 All of these are marked in the code with comments or are easy to find by
 searching the text below in `index.html`.
 
-**Contact form (currently non-functional until you set this up)**
-The form posts to [Formspree](https://formspree.io) so it works without a
-backend server. To activate it:
-1. Create a free Formspree account and a new form.
-2. Copy the endpoint it gives you (looks like `https://formspree.io/f/xxxxxxxx`).
-3. In `index.html`, find `YOUR_FORM_ID` in the `<form action="...">` tag and
-   replace it with your real endpoint.
-Until you do this, the "Email Me Directly" mailto link under the form still
-works fine.
+**Contact form**
+The form posts to your [Formspree](https://formspree.io) endpoint, so it
+works without a backend server. If you ever need to point it at a different
+Formspree form, replace the endpoint in the `<form action="...">` tag in
+`index.html`.
+
+The form also has a honeypot spam trap: a `_gotcha` field, visually hidden
+off-screen (search `hp-field` in `index.html`), that real visitors never see
+or fill in. Formspree automatically discards any submission where it comes
+back non-empty — no setup needed on your end, it just works. It won't stop
+every bot, but it filters out most basic spam submissions for free.
 
 **Audio samples**
 The Portfolio section embeds your "Sound Refinery Productions Spotlight"
@@ -115,9 +117,14 @@ that domain ever changes, update `CNAME` and the DNS records per
 ## 5. SEO setup
 
 The site includes the technical basics: meta description, canonical URL,
-Open Graph + Twitter card tags, `ProfessionalService` structured data
-(JSON-LD in `index.html`), plus `robots.txt` and `sitemap.xml` at the repo
-root — all pointed at `https://skophammer.com/`.
+Open Graph + Twitter card tags (with a share preview image), `ProfessionalService`
+structured data (JSON-LD in `index.html`, including `sameAs` links to Instagram
+and SoundCloud), plus `robots.txt` and `sitemap.xml` at the repo root — all
+pointed at `https://skophammer.com/`.
+
+If you ever swap the hero photo, update the `og:image` / `twitter:image`
+URLs (and the `image` field in the JSON-LD block) to match — search for
+`hero-bg.jpg` in `index.html` to find every spot it's referenced.
 
 **After launch:**
 - Submit the site in [Google Search Console](https://search.google.com/search-console)
