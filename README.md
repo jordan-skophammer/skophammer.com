@@ -106,24 +106,18 @@ python3 -m http.server 8000
 ```
 Then visit `http://localhost:8000`.
 
-## 4. Optional: custom domain
+## 4. Custom domain
 
-If you buy a domain later, add a `CNAME` file to the repo root containing
-just your domain (e.g. `skophammeraudio.com`), then configure the DNS
-records per [GitHub's custom domain docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
+The repo's `CNAME` file already points this site at `skophammer.com`. If
+that domain ever changes, update `CNAME` and the DNS records per
+[GitHub's custom domain docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
 
 ## 5. SEO setup
 
 The site includes the technical basics: meta description, canonical URL,
 Open Graph + Twitter card tags, `ProfessionalService` structured data
 (JSON-LD in `index.html`), plus `robots.txt` and `sitemap.xml` at the repo
-root.
-
-**Before launch:** search the whole project for `your-domain-here.com` and
-replace every instance with your real GitHub Pages URL (e.g.
-`https://<your-username>.github.io/<your-repo>/`) or your custom domain
-once you have one. It appears in `index.html` (canonical, `og:url`, the
-JSON-LD block), `robots.txt`, and `sitemap.xml`.
+root — all pointed at `https://skophammer.com/`.
 
 **After launch:**
 - Submit the site in [Google Search Console](https://search.google.com/search-console)
@@ -136,7 +130,7 @@ JSON-LD block), `robots.txt`, and `sitemap.xml`.
   and eventually a couple of blog-style posts (mixing tips, case studies),
   will do more for ranking over time than anything technical here.
 - One thing worth considering later: the current `<h1>` is the slogan
-  ("Your sound. Sharpened.") rather than a keyword-heavy phrase like
+  ("Analog soul, remote workflow.") rather than a keyword-heavy phrase like
   "Remote Mixing & Mastering." Slogans are great for brand feel, but a
   keyword-first H1 tends to perform better in search. Not changed here
   since it's a brand/voice call, not a technical one — happy to update it
