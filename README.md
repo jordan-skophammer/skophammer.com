@@ -55,8 +55,8 @@ replace the `src` URL on the `<iframe>` and update the two links in the
 accurate.
 
 **Artist / client list**
-Search for `artist-list` in `index.html` to find the roster section between
-Portfolio and About. It's a plain alphabetized `<ul>` that lays itself out
+Search for `artist-list` in `index.html` to find the roster section, the
+last section before Contact. It's a plain alphabetized `<ul>` that lays itself out
 into 3 columns (2 on tablet, 1 on mobile) via CSS `columns`, so adding or
 removing a name is just editing the `<li>` items — no grid math needed. Keep
 the list alphabetized as you edit it.
@@ -136,9 +136,9 @@ URLs (and the `image` field in the JSON-LD block) to match — search for
 - Real content helps more than any meta tag: your growing SoundCloud catalog,
   and eventually a couple of blog-style posts (mixing tips, case studies),
   will do more for ranking over time than anything technical here.
-- One thing worth considering later: the current `<h1>` is the slogan
-  ("Analog soul, remote workflow.") rather than a keyword-heavy phrase like
-  "Remote Mixing & Mastering." Slogans are great for brand feel, but a
-  keyword-first H1 tends to perform better in search. Not changed here
-  since it's a brand/voice call, not a technical one — happy to update it
-  if you want.
+- One thing worth considering later: the current `<h1>` is the full-bleed
+  brand wordmark ("Skōphammer Audio Engineering") rather than a keyword-heavy
+  phrase like "Remote Mixing & Mastering." That's a strong brand moment, but
+  a keyword-first H1 tends to perform a little better in search. Not changed
+  here since it's a brand/voice call, not a technical one — happy to update
+  it if you want.

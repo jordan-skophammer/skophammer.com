@@ -116,20 +116,9 @@
   }
   nav{
     max-width:var(--maxw); margin:0 auto;
-    display:flex; align-items:center; justify-content:space-between;
+    display:flex; align-items:center; justify-content:center;
     padding:16px 24px;
   }
-  .brand{display:flex; align-items:center; gap:12px;}
-  .brand svg{flex-shrink:0;}
-  .brand-name{
-    font-family:'Bebas Neue', sans-serif; font-size:26px; letter-spacing:.05em;
-    text-transform:uppercase; color:var(--text); line-height:1;
-  }
-  .brand-sub{
-    display:block; font-family:var(--font-body); font-weight:600; font-size:10.5px;
-    letter-spacing:.2em; text-transform:uppercase; color:var(--text-dim); margin-top:3px;
-  }
-  footer .brand-name{font-size:22px;}
   .nav-links{display:flex; gap:32px; align-items:center;}
   .nav-links a{font-size:14px; font-weight:500; color:var(--text-dim); transition:color .2s;}
   .nav-links a:hover{color:var(--text);}
@@ -138,7 +127,10 @@
     border-radius:100px; font-weight:600; font-size:14px;
   }
   .nav-cta:hover{background:var(--accent-dark);}
-  .nav-toggle{display:none; background:none; border:none; color:var(--text); font-size:26px; cursor:pointer;}
+  .nav-toggle{
+    display:none; margin-left:auto; background:none; border:none;
+    color:var(--text); font-size:26px; cursor:pointer;
+  }
   .nav-social{display:flex; align-items:center; gap:10px;}
   .nav-social a{
     width:32px; height:32px; border-radius:50%; border:1px solid var(--border);
@@ -167,20 +159,25 @@
   /* ---------- HERO ---------- */
   .hero{
     position:relative; overflow:hidden;
-    padding:120px 24px 100px;
+    padding:160px 24px 100px;
     background:
       linear-gradient(180deg, rgba(20,14,8,0.55), rgba(20,14,8,0.78)),
-      url('images/hero-bg.jpg') 30% 22% / cover no-repeat;
+      url('images/hero-bg.jpg') center center / cover no-repeat;
     text-align:center;
     color:#fdfaf5;
   }
   .hero .wrap{position:relative; z-index:1;}
-  .hero h1{font-size:clamp(36px,6.5vw,64px); margin-bottom:20px;}
-  .hero h1 span{color:#ffc069;}
-  .hero .eyebrow{color:#ffc069;}
-  .hero p.lead{
-    max-width:600px; margin:0 auto 36px; color:rgba(253,250,245,0.88); font-size:18px;
+  .sr-only{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
   }
+  .hero-wordmark{
+    position:relative; z-index:1;
+    font-family:'Bebas Neue', sans-serif; font-weight:400;
+    font-size:clamp(36px, 10vw, 160px); line-height:0.94;
+    text-transform:uppercase; color:#fdfaf5; margin:0 0 40px;
+  }
+  .wm-line{display:flex; justify-content:space-between; width:100%;}
   .btn-row{display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
   .btn{
     display:inline-flex; align-items:center; gap:8px;
@@ -322,22 +319,12 @@
 
 <header>
   <nav>
-    <a href="#top" class="brand">
-      <svg width="42" height="42" viewBox="0 0 44 44" fill="none">
-        <rect x="1" y="1" width="42" height="42" rx="10" fill="#fef3e2"/>
-        <path d="M8 30 A 16 16 0 0 1 36 30" fill="none" stroke="#e6ddd0" stroke-width="2.5"/>
-        <path d="M8 30 A 16 16 0 0 1 18 15.5" fill="none" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="22" y1="30" x2="31" y2="17" stroke="#92400e" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="22" cy="30" r="2.2" fill="#92400e"/>
-      </svg>
-      <span class="brand-name">Skōphammer<span class="brand-sub">Audio Engineering</span></span>
-    </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
     <div class="nav-links" id="navLinks">
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#artists">Artists</a>
       <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#services">Services</a>
+      <a href="#artists">Artists</a>
       <div class="nav-social">
         <a href="https://www.instagram.com/jskophammer/" target="_blank" rel="noopener" aria-label="Instagram">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
@@ -355,10 +342,13 @@
 
   <!-- HERO -->
   <section class="hero">
+    <h1 class="hero-wordmark">
+      <span class="sr-only">Skōphammer Audio Engineering</span>
+      <span class="wm-line" aria-hidden="true"><span>S</span><span>k</span><span>ō</span><span>p</span><span>h</span><span>a</span><span>m</span><span>m</span><span>e</span><span>r</span></span>
+      <span class="wm-line" aria-hidden="true"><span>A</span><span>u</span><span>d</span><span>i</span><span>o</span></span>
+      <span class="wm-line" aria-hidden="true"><span>E</span><span>n</span><span>g</span><span>i</span><span>n</span><span>e</span><span>e</span><span>r</span><span>i</span><span>n</span><span>g</span></span>
+    </h1>
     <div class="wrap">
-      <div class="eyebrow">Remote Mixing &amp; Mastering</div>
-      <h1>Analog soul, <span>remote workflow.</span></h1>
-      <p class="lead">Skōphammer Audio Engineering keeps the soul of analog gear in every mix — outboard hardware and hands-on techniques — then delivers it through a fully remote workflow, turning raw recordings into clear, powerful, release-ready sound that works with any budget.</p>
       <div class="btn-row">
         <a href="#contact" class="btn btn-primary">Start a Project</a>
         <a href="#portfolio" class="btn btn-outline">Hear the Work</a>
@@ -366,8 +356,59 @@
     </div>
   </section>
 
+  <!-- ABOUT -->
+  <section id="about" style="background:var(--bg-alt); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="wrap about-grid">
+      <div class="about-text reveal">
+        <div class="eyebrow">About</div>
+        <div class="slogan">"Analog soul, remote workflow."</div>
+        <p>Skōphammer Audio Engineering pours real analog soul into every mix — outboard gear and hands-on techniques — then delivers it through a fully remote workflow, so independent artists get release-ready sound that works with any budget.</p>
+        <p>I'm Jordan, the engineer behind Skōphammer — back in the mix after time away from the industry, giving home-recording artists a sound that can stand next to anything on the radio.</p>
+      </div>
+      <div class="gallery-wrap reveal">
+        <div class="slideshow" id="aboutSlideshow">
+          <img class="active" src="images/about-studio.jpg" alt="Mixing console and studio monitors" loading="lazy">
+          <img src="images/gallery/gallery-pedalboard.jpg" alt="Guitar pedalboard and tube amp" loading="lazy">
+          <img src="images/gallery/gallery-console.jpg" alt="Studio control room with monitors" loading="lazy">
+          <img src="images/gallery/gallery-amp-mics.jpg" alt="Guitar cabinet miked with ribbon microphones" loading="lazy">
+          <img src="images/gallery/gallery-drummer.jpg" alt="Drummer tracking behind the kit" loading="lazy">
+          <img src="images/gallery/gallery-fader.jpg" alt="Close-up of mixing console faders" loading="lazy">
+          <div class="slide-dots">
+            <button class="active" data-index="0" aria-label="Show photo 1"></button>
+            <button data-index="1" aria-label="Show photo 2"></button>
+            <button data-index="2" aria-label="Show photo 3"></button>
+            <button data-index="3" aria-label="Show photo 4"></button>
+            <button data-index="4" aria-label="Show photo 5"></button>
+            <button data-index="5" aria-label="Show photo 6"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Portfolio</div>
+        <h2>Hear the difference</h2>
+        <p>A selection of recent mixes and masters — press play below.</p>
+      </div>
+      <div class="sc-embed reveal">
+        <iframe height="450" scrolling="no" frameborder="no" allow="autoplay; encrypted-media"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A52891761%3Fsecret_token%3Ds-6JYSM&amp;color=%23b45309&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"
+          title="Sound Refinery Productions Spotlight playlist on SoundCloud"></iframe>
+        <div class="sc-attribution">
+          <a href="https://soundcloud.com/skophammerengineering" title="Skōphammer" target="_blank" rel="noopener">Skōphammer</a>
+          ·
+          <a href="https://soundcloud.com/skophammerengineering/sets/sound-refinery-producitons/s-6JYSM" title="Sound Refinery Productions Spotlight" target="_blank" rel="noopener">Sound Refinery Productions Spotlight</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICES -->
-  <section id="services">
+  <section id="services" style="background:var(--bg-alt); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
     <div class="wrap">
       <div class="section-head reveal">
         <div class="eyebrow">Services</div>
@@ -403,29 +444,8 @@
     </div>
   </section>
 
-  <!-- PORTFOLIO -->
-  <section id="portfolio">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Portfolio</div>
-        <h2>Hear the difference</h2>
-        <p>A selection of recent mixes and masters — press play below.</p>
-      </div>
-      <div class="sc-embed reveal">
-        <iframe height="450" scrolling="no" frameborder="no" allow="autoplay; encrypted-media"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A52891761%3Fsecret_token%3Ds-6JYSM&amp;color=%23b45309&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"
-          title="Sound Refinery Productions Spotlight playlist on SoundCloud"></iframe>
-        <div class="sc-attribution">
-          <a href="https://soundcloud.com/skophammerengineering" title="Skōphammer" target="_blank" rel="noopener">Skōphammer</a>
-          ·
-          <a href="https://soundcloud.com/skophammerengineering/sets/sound-refinery-producitons/s-6JYSM" title="Sound Refinery Productions Spotlight" target="_blank" rel="noopener">Sound Refinery Productions Spotlight</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ARTISTS -->
-  <section id="artists" style="background:var(--bg-alt); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <section id="artists">
     <div class="wrap">
       <div class="section-head reveal">
         <div class="eyebrow">Selected Clients</div>
@@ -455,36 +475,6 @@
         <li>Western Affairs</li>
         <li>Wet Eyes</li>
       </ul>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="wrap about-grid">
-      <div class="about-text reveal">
-        <div class="eyebrow">About</div>
-        <div class="slogan">"Analog soul, remote workflow."</div>
-        <p>Skōphammer Audio Engineering pours real analog soul into every mix — outboard gear and hands-on techniques — then delivers it through a fully remote workflow, so independent artists get release-ready sound that works with any budget.</p>
-        <p>I'm Jordan, the engineer behind Skōphammer — back in the mix after time away from the industry, giving home-recording artists a sound that can stand next to anything on the radio.</p>
-      </div>
-      <div class="gallery-wrap reveal">
-        <div class="slideshow" id="aboutSlideshow">
-          <img class="active" src="images/about-studio.jpg" alt="Mixing console and studio monitors" loading="lazy">
-          <img src="images/gallery/gallery-pedalboard.jpg" alt="Guitar pedalboard and tube amp" loading="lazy">
-          <img src="images/gallery/gallery-console.jpg" alt="Studio control room with monitors" loading="lazy">
-          <img src="images/gallery/gallery-amp-mics.jpg" alt="Guitar cabinet miked with ribbon microphones" loading="lazy">
-          <img src="images/gallery/gallery-drummer.jpg" alt="Drummer tracking behind the kit" loading="lazy">
-          <img src="images/gallery/gallery-fader.jpg" alt="Close-up of mixing console faders" loading="lazy">
-          <div class="slide-dots">
-            <button class="active" data-index="0" aria-label="Show photo 1"></button>
-            <button data-index="1" aria-label="Show photo 2"></button>
-            <button data-index="2" aria-label="Show photo 3"></button>
-            <button data-index="3" aria-label="Show photo 4"></button>
-            <button data-index="4" aria-label="Show photo 5"></button>
-            <button data-index="5" aria-label="Show photo 6"></button>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -554,16 +544,6 @@
 </main>
 
 <footer>
-  <div class="brand">
-    <svg width="36" height="36" viewBox="0 0 44 44" fill="none">
-      <rect x="1" y="1" width="42" height="42" rx="10" fill="#fef3e2"/>
-      <path d="M8 30 A 16 16 0 0 1 36 30" fill="none" stroke="#e6ddd0" stroke-width="2.5"/>
-      <path d="M8 30 A 16 16 0 0 1 18 15.5" fill="none" stroke="#b45309" stroke-width="2.5" stroke-linecap="round"/>
-      <line x1="22" y1="30" x2="31" y2="17" stroke="#92400e" stroke-width="2" stroke-linecap="round"/>
-      <circle cx="22" cy="30" r="2.2" fill="#92400e"/>
-    </svg>
-    <span class="brand-name">Skōphammer<span class="brand-sub">Audio Engineering</span></span>
-  </div>
   <p id="year-line">© 2026 Skōphammer Audio Engineering. Analog soul, remote workflow.</p>
 </footer>
 
